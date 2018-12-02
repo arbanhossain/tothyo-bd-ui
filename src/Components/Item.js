@@ -14,7 +14,7 @@ class Item extends Component{
                     //console.log(item[prop])
                     if(typeof item[prop] === 'object'){
                         returners.push(<h3 className="itemHeading">{prop}</h3>)
-                        showItem(item[prop])                      
+                        showItem(item[prop])              
                     } else {
                         if(prop == '_id'){
                             returners.push(<span><strong>{prop}</strong>: {item[prop]}</span>)
@@ -25,7 +25,7 @@ class Item extends Component{
                     }
                     //returner.push(<li>{subreturner}</li>)
                 }
-                if(returner.length>0) returners.push(<ul>{returner}</ul>);
+                if(returner.length>0) returners.push(returner);
             }
             return <div> {returners} </div>;
         }
