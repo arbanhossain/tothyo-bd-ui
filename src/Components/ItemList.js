@@ -7,7 +7,7 @@ class ItemList extends Component{
         let items;
         if(this.props.itemList){
             items = this.props.itemList.map(item => {
-                console.log(item);
+                //console.log(item);
                 return(
                     <div>
                         <h3>{item.location_data.zila}</h3>
