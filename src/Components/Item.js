@@ -12,7 +12,7 @@ class Item extends Component{
                 let subreturner = [];
                 if(item.hasOwnProperty(prop)){
                     //console.log(item[prop])
-                    if(typeof item[prop] === 'object'){
+                    if(typeof item[prop] === 'object' && typeof prop != 'number'){
                         returners.push(<h3 className="itemHeading">{prop}</h3>)
                         showItem(item[prop])              
                     } else {

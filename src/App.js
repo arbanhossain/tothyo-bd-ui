@@ -15,6 +15,7 @@ class App extends Component {
       Data: [],
       zila: ''
     }
+    this.changeZila = this.changeZila.bind(this);
   }
 
   getItems(){
@@ -36,9 +37,15 @@ class App extends Component {
     var zila = zilas.options[zilas.selectedIndex].value;
     console.log(zila);
     this.setState({zila: zila})//returns -> this.setState is not a function
+    this.getItems();
   }
 
   componentWillMount(){
+    //this.getOriginalData();
+    this.getItems();
+  }
+
+  componentWillUpdate(){
     //this.getOriginalData();
     this.getItems();
   }
